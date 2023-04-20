@@ -154,6 +154,9 @@
     <None Update="Templates\config\flatbuffers\convert_json_to_binary_sh.tpl">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <None Update="Templates\config\flatbuffers\reader.tpl">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Update="Templates\config\flatbuffers\table.tpl">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
