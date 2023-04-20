@@ -2,8 +2,8 @@
   "profiles": {
     "Luban.ClientServer schema": {
       "commandName": "Project",
-      "commandLineArgs": "-j cfg --\r\n -d ..\\Defines\\__root__.xml \r\n --input_data_dir ..\\Data \r\n --output_code_dir schema \r\n --output_data_dir datas \r\n --gen_types code_flatbuffers,data_flatbuffers_json,code_reader_cs_flatbuffers\r\n -s all \r\n --l10n:input_text_files ..\\Data\\Multi_Languages.xlsx \r\n --l10n:text_field_name text_tc \r\n --l10n:output_not_translated_text_file NotLocalized.txt",
-      "workingDirectory": "D:\\HIM\\himdev\\Excel\\Shell",
+      "commandLineArgs": "-j cfg --\r\n -d ..\\Defines\\__root__.xml \r\n --input_data_dir ..\\Data \r\n --output_code_dir schema \r\n --output_data_dir datas \r\n --gen_types code_flatbuffers,data_flatbuffers_json,code_reader_cs_flatbuffers\r\n -s all \r\n --l10n:input_text_files ..\\Data\\Language.xlsx \r\n --l10n:text_field_name text_tc \r\n --l10n:output_not_translated_text_file NotLocalized.txt",
+      "workingDirectory": "D:\\HIM\\himdevTemp\\Excel\\Shell\\",
       "environmentVariables": {
         "WORKSPACE": "..\\..\\..\\luban\\src",
         "EXCEL_ROOT": "..",

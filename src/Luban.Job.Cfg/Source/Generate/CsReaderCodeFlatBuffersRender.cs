@@ -45,12 +45,18 @@ namespace Luban.Job.Cfg.Source.Generate
         private string RenderReader(GenContext ctx, DefTable table)
         {
             var template = GetConfigTemplate(templateName);
+            var keyFieldName = Regex.Replace(table.IndexField.Name, "^[a-z]", c => c.Value.ToUpper());
+            keyFieldName = Regex.Replace(keyFieldName, "(_)([0-9a-z]+)", (c) => {
+                var temp = c.Value.Replace("_", string.Empty);
+                temp = Regex.Replace(temp, "^[a-z]", c => c.Value.ToUpper());
+                return temp;
+            });
             var result = template.RenderCode(new {
                 ReaderName = table.FullName + "Reader",
                 Namespace = ctx.TopModule,
                 Table = table,
                 KeyType = table.KeyTType.TypeName,
-                KeyField = Regex.Replace(table.IndexField.Name, "^[a-z]", c => c.Value.ToUpper())
+                KeyField = keyFieldName
             });
             return result;
         }
